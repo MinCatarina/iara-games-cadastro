@@ -4,7 +4,7 @@
 
 ## Como a API funciona
 
-- API: [ViaCEP](https://viacep.com.br) (gratuita, sem chave de acesso, com CORS liberado)
+- API: [ViaCEP](https://viacep.com.br) 
 - Requisição: `GET https://viacep.com.br/ws/{cep}/json/`
 - CEP existente: retorna `{ cep, logradouro, bairro, localidade, uf, ... }`
 - CEP válido, mas inexistente: retorna `{ "erro": true }`
@@ -21,27 +21,7 @@ Tratamento de estados: carregando (spinner), sucesso (endereço + região do Bra
 - Tela de confirmação com resumo do cadastro
 - Layout responsivo e acessível (rótulos, `aria-invalid`, `aria-describedby`, `aria-live`)
 
-## Estrutura
 
-```
-src/
-├── main.jsx, App.jsx
-├── components/    Header, Footer, Field, SuccessCard
-├── hooks/         useCep.js        (estado da consulta: idle/loading/success/error)
-├── services/      viaCep.js        (chamada à API e tratamento de erros)
-├── utils/         masks.js, validators.js, regions.js
-└── styles/        global.css
-```
-
-## Como rodar
-
-Requer [Node.js](https://nodejs.org) 18+.
-
-```bash
-npm install
-npm run dev     # http://localhost:5173
-npm run build   # gera a pasta dist/
-```
 
 ## Deploy
 
