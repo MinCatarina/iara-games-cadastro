@@ -20,9 +20,3 @@ Tratamento de estados: carregando (spinner), sucesso (endereço + região do Bra
 - Região do Brasil identificada pela UF
 - Tela de confirmação com resumo do cadastro
 - Layout responsivo e acessível (rótulos, `aria-invalid`, `aria-describedby`, `aria-live`)
-
-
-
-## Deploy
-
-Vercel, Netlify ou Render: importe o repositório (comando `npm run build`, pasta `dist`). O `vite.config.js` usa `base: "./"`, então o build funciona em qualquer hospedagem.
