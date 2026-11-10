@@ -8,9 +8,9 @@
 - Requisição: `GET https://viacep.com.br/ws/{cep}/json/`
 - CEP existente: retorna `{ cep, logradouro, bairro, localidade, uf, ... }`
 - CEP válido, mas inexistente: retorna `{ "erro": true }`
-- A consulta dispara sozinha quando o usuário completa os 8 dígitos. Uma consulta anterior em andamento é cancelada com `AbortController`.
+- A consulta dispara sozinha quando o usuário completa os 8 dígitos.
 
-Tratamento de estados: carregando (spinner), sucesso (endereço + região do Brasil), CEP não encontrado, serviço indisponível (erro HTTP) e falha de rede.
+Tratamento de estados: carregando (spinner), sucesso (endereço + região do Brasil), CEP não encontrado.
 
 ## Funcionalidades
 
@@ -19,4 +19,7 @@ Tratamento de estados: carregando (spinner), sucesso (endereço + região do Bra
 - Validação em tempo real, com mensagens de erro/sucesso por campo
 - Região do Brasil identificada pela UF
 - Tela de confirmação com resumo do cadastro
-- Layout responsivo e acessível (rótulos, `aria-invalid`, `aria-describedby`, `aria-live`)
+- Layout responsivo e acessível
+
+## Deploy
+https://iara-games-cadastro.netlify.app
